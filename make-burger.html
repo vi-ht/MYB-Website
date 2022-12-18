@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Make your burger</title>
+    <link rel="icon" href="asset/web-icon/burger.png">
+    <!--Meta data-->
+    <meta name="author" content="Thanh Vi">
+    <meta name="start-date" content="17/12/2022">
+    <meta property="og:title" content="Make your burger">
+    <meta property="og:description" content="Make our own burger!">
+    <meta property="og:url" content="http://">
+    <meta property="og:image" content="asset/web-icon/burger.png">
+    <!--Import CSS-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/myStyle.css">
+    <!--Import icon lib-->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <!--Import JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body class="w-100 h-100">
+    <nav class="container-fluid navbar navbar-expand-lg bg-white position-fixed top-0" style="z-index: 1;">
+        <div class="container-lg p-0">
+            <img class="navbar-brand" src="asset/web-icon/logo.jpg" style="width:50px;height:60px;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex flex-row justify-content-between align-items-baseline"
+                id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Discover</a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link active" href="index.html">Make your burger</a>
+                        <div id="active-link" style="width: 133px;"></div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-flex flex-row align-items-baseline">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary rounded-pill position-relative"
+                            style="background:#FFEDED; border:none;color:#FF4D4F">
+                            <iconify-icon icon="ic:baseline-local-phone" style="color: #FF4D4F;top:6px;left:9px"
+                                width="24" height="24" class="position-absolute"></iconify-icon>
+                            <span class="ms-4">Call Me Back</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">8 800 437-87-22</a>
+                    </li>
+                    <li class="nav-item">
+                        <img class="navbar-brand" src="asset/web-icon/avatar.png" style="width:50px;height:60px;">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End header -->
+    <main class="" style="width:100vw;height:100vh; ">
+        <div class="container" style="width:100%;height:100%;">
+            <div class="container row position-relative" style="width:100%;height:100%;">
+                <div class="col-2 col-md-2 col-lg-2 d-flex justify-content-center align-items-center flex-column">
+
+                </div>
+                <div class="col-9 col-md-10 col-lg-6">
+                    <div class="col-7 position-relative d-flex justify-content-center align-items-center"
+                        style="width:100%;height:100%;left:5%">
+                        <img src="asset/banner/empty-burger.png" class="position-absolute" id="empty-bun">
+                        <img src="asset/ingredients/tomato-ketchup.png" class="position-absolute" id="tomato-ketchup">
+                    </div>
+                </div>
+                <div class="col-4 col-md-2 col-lg-4" style="" id="summary">
+                    <h3>Summary</h3>
+                    <hr>
+                    <div class="d-flex flex-row justify-content-between mb-2">
+                        <span class="display-6 fw-bold" style="color: #5243C2">$12.04</span>
+                        <button type="button" class="btn btn-primary rounded-pill p-0 ps-5 pe-5 fw-bold"
+                            style="background-color: #5243C2;border: none;">Complete</button>
+                    </div>
+                    <div>Build a <span class="fw-bold" style="color:#FF4D4F">$10</span> Burger and <span class="fw-bold"
+                            style="color:#5243C2">Get a Gift</span></div>
+                    <div class="d-flex flex-row justify-content-between rounded-pill p-2 mt-3"
+                        style="background-color: #ececfe">
+                        <div>
+                            <img src="asset/web-icon/time.png" class="icon-summary">
+                            <span class="position-relative fw-semibold" style="top: 3px">7 mins</span>
+                        </div>
+                        <div>
+                            <img src="asset/web-icon/weight.png" class="icon-summary">
+                            <span class="position-relative fw-semibold" style="top: 3px">20 oz</span>
+                        </div>
+                        <div>
+                            <img src="asset/web-icon/kcal.png" class="icon-summary">
+                            <span class="position-relative me-1 fw-semibold" style="top: 3px">255 kcal</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 row position-absolute" style="bottom: 9%;">
+                    <div class="col p-1 position-relative">
+                        <div class="position-absolute info p-2" id="beef-card" style="left: 10px;">
+                            <img src="asset/ingredients/cutlet.png" style="width:60%;height:40px;margin: 5px 20%"
+                                class="mt-3 mb-2">
+                            <div class="text-center fw-bold">Cutlet</div>
+                            <div class="text-center mb-3">1 piece of America beef</div>
+                            <hr class="m-2" style="color:#5243C2">
+                            <div class="d-flex flex-row justify-content-between rounded-pill p-2 mt-0"
+                                style="background-color: #ececfe">
+                                <div>
+                                    <img src="asset/web-icon/dollar.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">$1.54</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/weight.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">20 oz</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/kcal.png" class="icon-summary-small">
+                                    <span class="position-relative me-1 fw-semibold" style="top: 3px">255 kcal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-absolute retangle" id="beef-reg"></div>
+                        <iconify-icon icon="heroicons:information-circle-solid" width="30" height="30"
+                            style="color:#5243C2;top:-3px;right:-3px" class="position-absolute"
+                            id="beef-info"></iconify-icon>
+                        <div class="ingredient-card p-2">
+                            <img src="asset/ingredients/cutlet.png" style="width:100%;height:30px" class="mt-3 mb-2">
+                            <div class="text-center fw-semibold">Cutlet</div>
+                            <div class="mt-2 cal">
+                                <div class="" id="plus-btn">
+                                    <iconify-icon icon="ic:twotone-plus" width="24" height="24"></iconify-icon>
+                                </div>
+                                <div class="">0</div>
+                                <div class="" id="minus-btn">
+                                    <iconify-icon icon="ic:round-minus" width="24" height="24"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-1 position-relative">
+                        <div class="position-absolute info p-2" id="cheese-card">
+                            <img src="asset/ingredients/cheese.png" style="width:60%;height:40px;margin: 5px 20%"
+                                class="mt-3 mb-2">
+                            <div class="text-center fw-bold">Cheese</div>
+                            <div class="text-center mb-3">1 slice of cheese</div>
+                            <hr class="m-2" style="color:#5243C2">
+                            <div class="d-flex flex-row justify-content-between rounded-pill p-2 mt-0"
+                                style="background-color: #ececfe">
+                                <div>
+                                    <img src="asset/web-icon/dollar.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">$1.54</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/weight.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">20 oz</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/kcal.png" class="icon-summary-small">
+                                    <span class="position-relative me-1 fw-semibold" style="top: 3px">255 kcal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-absolute retangle" id="cheese-reg"></div>
+                        <iconify-icon icon="heroicons:information-circle-solid" width="30" height="30"
+                            style="color:#5243C2;top:-3px;right:-3px" class="position-absolute"
+                            id="cheese-info"></iconify-icon>
+                        <div class="ingredient-card p-2">
+                            <img src="asset/ingredients/cheese.png" style="width:100%;height:30px" class="mt-3 mb-2">
+                            <div class="text-center fw-semibold">Cheese</div>
+                            <div class="mt-2 cal">
+                                <div class="" id="plus-btn">
+                                    <iconify-icon icon="ic:twotone-plus" width="24" height="24"></iconify-icon>
+                                </div>
+                                <div class="">0</div>
+                                <div class="" id="minus-btn">
+                                    <iconify-icon icon="ic:round-minus" width="24" height="24"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-1 position-relative">
+                        <div class="position-absolute info p-2" id="mayo-card">
+                            <img src="asset/ingredients/mayo.png" style="width:60%;height:40px;margin: 5px 20%"
+                                class="mt-3 mb-2">
+                            <div class="text-center fw-bold">Mayo</div>
+                            <div class="text-center mb-3">Some mayonnaise</div>
+                            <hr class="m-2" style="color:#5243C2">
+                            <div class="d-flex flex-row justify-content-between rounded-pill p-2 mt-0"
+                                style="background-color: #ececfe">
+                                <div>
+                                    <img src="asset/web-icon/dollar.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">$1.54</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/weight.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">20 oz</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/kcal.png" class="icon-summary-small">
+                                    <span class="position-relative me-1 fw-semibold" style="top: 3px">255 kcal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-absolute retangle" id="mayo-reg"></div>
+                        <iconify-icon icon="heroicons:information-circle-solid" width="30" height="30"
+                            style="color:#5243C2;top:-3px;right:-3px" class="position-absolute"
+                            id="mayo-info"></iconify-icon>
+                        <div class="ingredient-card p-2">
+                            <img src="asset/ingredients/mayo.png" style="width:100%;height:30px" class="mt-3 mb-2">
+                            <div class="text-center fw-semibold">Mayo</div>
+                            <div class="mt-2 cal">
+                                <div class="" id="plus-btn">
+                                    <iconify-icon icon="ic:twotone-plus" width="24" height="24"></iconify-icon>
+                                </div>
+                                <div class="">0</div>
+                                <div class="" id="minus-btn">
+                                    <iconify-icon icon="ic:round-minus" width="24" height="24"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-1 position-relative">
+                        <div class="position-absolute info p-2" id="salad-card">
+                            <img src="asset/ingredients/salad.png" style="width:60%;height:40px;margin: 5px 20%"
+                                class="mt-3 mb-2">
+                            <div class="text-center fw-bold">Salad</div>
+                            <div class="text-center mb-3">Some lettuce leaves</div>
+                            <hr class="m-2" style="color:#5243C2">
+                            <div class="d-flex flex-row justify-content-between rounded-pill p-2 mt-0"
+                                style="background-color: #ececfe">
+                                <div>
+                                    <img src="asset/web-icon/dollar.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">$1.54</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/weight.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">20 oz</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/kcal.png" class="icon-summary-small">
+                                    <span class="position-relative me-1 fw-semibold" style="top: 3px">255 kcal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-absolute retangle" id="salad-reg"></div>
+                        <iconify-icon icon="heroicons:information-circle-solid" width="30" height="30"
+                            style="color:#5243C2;top:-3px;right:-3px" class="position-absolute"
+                            id="salad-info"></iconify-icon>
+                        <div class="ingredient-card p-2">
+                            <img src="asset/ingredients/salad.png" style="width:100%;height:30px" class="mt-3 mb-2">
+                            <div class="text-center fw-semibold">Salad</div>
+                            <div class="mt-2 cal">
+                                <div class="" id="plus-btn">
+                                    <iconify-icon icon="ic:twotone-plus" width="24" height="24"></iconify-icon>
+                                </div>
+                                <div class="">0</div>
+                                <div class="" id="minus-btn">
+                                    <iconify-icon icon="ic:round-minus" width="24" height="24"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-1 position-relative">
+
+                        <div class="ingredient-card p-2 position-relative" style="z-index: 0 !important;">
+                            <img src="asset/ingredients/tomato.png" style="width:90%;height:45px;top: -3px"
+                                class="mt-3 mb-2 position-absolute">
+                            <div style="width:100%;height:30px" class="mt-3 mb-2"></div>
+                            <div class="text-center fw-semibold">Tomato</div>
+                            <div class="mt-2 cal">
+                                <div class="" id="plus-btn">
+                                    <iconify-icon icon="ic:twotone-plus" width="24" height="24"></iconify-icon>
+                                </div>
+                                <div class="">0</div>
+                                <div class="" id="minus-btn">
+                                    <iconify-icon icon="ic:round-minus" width="24" height="24"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-absolute info p-2" id="tomato-card" style="z-index: 1 !important;">
+                            <img src="asset/ingredients/tomato.png"
+                                style="width:60%;height:65px;margin: 5px 20%;top:-5px"
+                                class="mt-3 mb-2 position-absolute">
+                            <div style="width:60%;height:40px;margin: 5px 20%;" class="mt-3 mb-2"></div>
+                            <div class="text-center fw-bold">Tomato</div>
+                            <div class="text-center mb-3">2 slices of tomato</div>
+                            <hr class="m-2" style="color:#5243C2">
+                            <div class="d-flex flex-row justify-content-between rounded-pill p-2 mt-0"
+                                style="background-color: #ececfe">
+                                <div>
+                                    <img src="asset/web-icon/dollar.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">$1.54</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/weight.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">20 oz</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/kcal.png" class="icon-summary-small">
+                                    <span class="position-relative me-1 fw-semibold" style="top: 3px">255 kcal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-absolute retangle" id="tomato-reg"></div>
+                        <iconify-icon icon="heroicons:information-circle-solid" width="30" height="30"
+                            style="color:#5243C2;top:-3px;right:-3px" class="position-absolute"
+                            id="tomato-info"></iconify-icon>
+                    </div>
+                    <div class="col p-1 position-relative">
+                        <div class="position-absolute info p-2" id="onion-card">
+                            <img src="asset/ingredients/onion.png"
+                                style="width:60%;height:65px;margin: 5px 20%;top:-5px"
+                                class="mt-3 mb-2 position-absolute">
+                            <div style="width:60%;height:40px;margin: 5px 20%" class="mt-3 mb-2"></div>
+                            <div class="text-center fw-bold">Onion</div>
+                            <div class="text-center mb-3">2 slices of onion</div>
+                            <hr class="m-2" style="color:#5243C2">
+                            <div class="d-flex flex-row justify-content-between rounded-pill p-2 mt-0"
+                                style="background-color: #ececfe">
+                                <div>
+                                    <img src="asset/web-icon/dollar.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">$1.54</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/weight.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">20 oz</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/kcal.png" class="icon-summary-small">
+                                    <span class="position-relative me-1 fw-semibold" style="top: 3px">255 kcal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-absolute retangle" id="onion-reg"></div>
+                        <div class="ingredient-card p-2 position-relative">
+                            <img src="asset/ingredients/onion.png" style="width:90%;height:45px;top: -3px"
+                                class="mt-3 mb-2 position-absolute">
+                            <div style="width:100%;height:30px" class="mt-3 mb-2"></div>
+                            <div class="text-center fw-semibold">Onion</div>
+                            <div class="mt-2 cal">
+                                <div class="" id="plus-btn">
+                                    <iconify-icon icon="ic:twotone-plus" width="24" height="24"></iconify-icon>
+                                </div>
+                                <div class="">0</div>
+                                <div class="" id="minus-btn">
+                                    <iconify-icon icon="ic:round-minus" width="24" height="24"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <iconify-icon icon="heroicons:information-circle-solid" width="30" height="30"
+                            style="color:#5243C2;top:-3px;right:-3px" class="position-absolute"
+                            id="onion-info"></iconify-icon>
+                    </div>
+                    <div class="col p-1 position-relative">
+                        <div class="ingredient-card p-2">
+                            <img src="asset/ingredients/bun_middle.png" style="width:100%;height:30px"
+                                class="mt-3 mb-2">
+                            <div class="text-center fw-semibold">Bun middle</div>
+                            <div class="mt-2 cal">
+                                <div class="" id="plus-btn">
+                                    <iconify-icon icon="ic:twotone-plus" width="24" height="24"></iconify-icon>
+                                </div>
+                                <div class="">0</div>
+                                <div class="" id="minus-btn">
+                                    <iconify-icon icon="ic:round-minus" width="24" height="24"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-absolute info p-2" id="bun-card">
+                            <img src="asset/ingredients/bun_middle.png" style="width:60%;height:40px;margin: 5px 20%"
+                                class="mt-3 mb-2">
+                            <div class="text-center fw-bold">Bun middle</div>
+                            <div class="text-center mb-3">Core of hamburger bun</div>
+                            <hr class="m-2" style="color:#5243C2">
+                            <div class="d-flex flex-row justify-content-between rounded-pill p-2 mt-0"
+                                style="background-color: #ececfe">
+                                <div>
+                                    <img src="asset/web-icon/dollar.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">$1.54</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/weight.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">20 oz</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/kcal.png" class="icon-summary-small">
+                                    <span class="position-relative me-1 fw-semibold" style="top: 3px">255 kcal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-absolute retangle" id="bun-reg"></div>
+                        <iconify-icon icon="heroicons:information-circle-solid" width="30" height="30"
+                            style="color:#5243C2;top:-3px;right:-3px" class="position-absolute"
+                            id="bun-info"></iconify-icon>
+                    </div>
+                    <div class="col p-1 position-relative">
+                        <div class="position-absolute info p-2" id="cucumber-card" style="left: -100px;">
+                            <img src="asset/ingredients/cucumber.png"
+                                style="width:60%;height:85px;margin: 5px 20%; top:-10px"
+                                class="mt-3 mb-2 position-absolute">
+                            <div style="width:60%;height:40px;margin: 5px 20%" class="mt-3 mb-2"></div>
+                            <div class="text-center fw-bold">Cucumber</div>
+                            <div class="text-center mb-3">3 slices of cucumber</div>
+                            <hr class="m-2" style="color:#5243C2">
+                            <div class="d-flex flex-row justify-content-between rounded-pill p-2 mt-0"
+                                style="background-color: #ececfe">
+                                <div>
+                                    <img src="asset/web-icon/dollar.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">$1.54</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/weight.png" class="icon-summary-small">
+                                    <span class="position-relative fw-semibold" style="top: 3px">20 oz</span>
+                                </div>
+                                <div>
+                                    <img src="asset/web-icon/kcal.png" class="icon-summary-small">
+                                    <span class="position-relative me-1 fw-semibold" style="top: 3px">255
+                                        kcal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-absolute retangle" id="cucumber-reg"></div>
+                        <div class="ingredient-card p-2 position-relative">
+                            <img src="asset/ingredients/cucumber.png" style="width:90%;height:75px; top: -15px"
+                                class="mt-3 mb-2 position-absolute">
+                            <div style="width:100%;height:30px" class="mt-3 mb-2"></div>
+                            <div class="text-center fw-semibold">Cucumber</div>
+                            <div class="mt-2 cal">
+                                <div class="" id="plus-btn">
+                                    <iconify-icon icon="ic:twotone-plus" width="24" height="24"></iconify-icon>
+                                </div>
+                                <div class="">0</div>
+                                <div class="" id="minus-btn">
+                                    <iconify-icon icon="ic:round-minus" width="24" height="24"></iconify-icon>
+                                </div>
+                            </div>
+
+
+                            <iconify-icon icon="heroicons:information-circle-solid" width="30" height="30"
+                                style="color:#5243C2;top:-10px;right:-3px; z-index: 2;" class="position-absolute"
+                                id="cucumber-info"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- End main -->
+    <nav class="container-fluid navbar navbar-expand-lg bg-white position-fixed bottom-0">
+        <div class="container-lg p-0">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex flex-row justify-content-between align-items-baseline"
+                id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">2022. Make Your Burger</a>
+                    </li>
+                    <li class="nav-item d-flex flex-row justify-content-center">
+                        <a class="nav-link" href="#" style="color:#5243C2">Privacy Policy</a>
+                        <a class="nav-link" href="#" style="color:gray">|</a>
+                        <a class="nav-link" href="#" style="color:#5243C2">Terms & Conditions</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-flex flex-row align-items-baseline">
+                    <li class="nav-item">
+                        <img class="navbar-brand" src="asset/web-icon/payment-logos.jpg"
+                            style="width:45px;height:40px;">
+                    </li>
+                    <li class="nav-item">
+                        <img class="navbar-brand" src="asset/web-icon/payment-logos1.jpg"
+                            style="width:45px;height:40px;">
+                    </li>
+                    <li class="nav-item">
+                        <img class="navbar-brand" src="asset/web-icon/payment-logos2.jpg"
+                            style="width:45px;height:40px;">
+                    </li>
+                    <li class="nav-item">
+                        <img class="navbar-brand" src="asset/web-icon/payment-logos3.jpg"
+                            style="width:45px;height:40px;">
+                    </li>
+                    <li class="nav-item">
+                        <img class="navbar-brand" src="asset/web-icon/payment-logos4.jpg"
+                            style="width:45px;height:40px;">
+                    </li>
+                    <li class="nav-item">
+                        <img class="navbar-brand" src="asset/web-icon/payment-logos5.jpg"
+                            style="width:45px;height:40px;">
+                    </li>
+                    <li class="nav-item">
+                        <img class="navbar-brand" src="asset/web-icon/payment-logos6.jpg"
+                            style="width:45px;height:40px;">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End footer -->
+    <script>
+        var listIngredient = ["beef", "cheese", "mayo", "salad", "tomato", "onion", "bun", "cucumber"];
+        $(document).ready(function () {
+            $("#tomato-ketchup").hide();
+            addIngredientCard(listIngredient);
+        });
+        function addIngredientCard(listIngredient) {
+            for (let item of listIngredient) {
+                hideInfo(item);
+                showInfo(item);
+            }
+        }
+        function showInfo(id) {
+            $(`#${id}-info`).mouseover(function () {
+                $(`#${id}-card`).fadeIn(600);
+                $(`#${id}-reg`).fadeIn(600);
+            });
+            $(`#${id}-info`).mouseout(function () {
+                $(`#${id}-card`).fadeOut(200);
+                $(`#${id}-reg`).fadeOut(200);
+            });
+        }
+        function hideInfo(id) {
+            $(`#${id}-card`).hide();
+            $(`#${id}-reg`).hide();
+        }
+    </script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+#circle-btn {
+    animation-name: example;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    top: 55.8%;
+    left: -3.05%;
+    width: 145px;
+    height: 145px;
+    background: #1bc06300;
+    z-index: -1;
+    border: 3px solid #5243C2;
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+    border-top: 3px solid rgba(255, 255, 255, 0);
+    border-top-left-radius: 100% !important;
+    border-bottom-left-radius: 100% !important;
+    border-top-right-radius: 100% !important;
+    border-bottom-right-radius: 100% !important;
+}
+
+@keyframes example {
+
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#main-button {
+    top: 57%;
+    left: -2%;
+    z-index: 1;
+    width: 130px;
+    height: 130px;
+    background: #5243C2;
+    color: white;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#main-button:hover {
+    background: #5243c232;
+    color: #5243C2 !important;
+}
+
+#active-link {
+    width: 65px;
+    height: 4px;
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+    background: #5243C2;
+    border-radius: 5px;
+}
+
+.ingredient-card {
+    border: 2px dashed #ececfe;
+    border-radius: 1rem;
+}
+
+#plus-btn, #minus-btn {
+    background-color: #ececfe;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+
+#plus-btn>iconify-icon, #minus-btn>iconify-icon {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+.cal {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+}
+
+.icon-summary {
+    width: 33px;
+    height: 33px;
+}
+
+.icon-summary-small {
+    width: 25px;
+    height: 25px;
+}
+
+.info {
+    width: 300px;
+    height: 200px;
+    background-color: #ededfa;
+    z-index: 2;
+    position: absolute;
+    top: -208px;
+    left: -55px;
+    border-radius: 1rem;
+}
+
+.retangle {
+    width: 20px;
+    height: 20px;
+    background-color: #ececfe;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -18px;
+    right: 2px;
+    z-index: -1;
+}
+
+#tomato-ketchup {
+    top: 46%;
+    right: 0;
+    z-index: 1;
+}
+
+#summary {
+    margin-top: 10%;
+}
+
+#empty-bun {
+    top: 8%;
+    left: 15%;
+    z-index: 1;
+    width: 75%;
+    height: 58%
+}
+
+@media screen and (min-width: 1400px) {
+    #circle-btn {
+        top: 56.1%;
+        left: -2.9%;
+    }
+
+    #tomato-ketchup {
+        top: 51%;
+        right: -10px;
+        z-index: 1;
+    }
+
+    #summary {
+        margin-top: 15%;
+    }
+
+    @media screen and (max-width: 1500px) and (min-width: 1400px) {
+        #summary {
+            margin-top: 12%;
+        }
+        #empty-bun {
+            top: 7%;
+            left: 15%;
+            width: 72%;
+            height: 61%
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px) {
+    #tomato-ketchup {
+        top: 46%;
+        right: -10px;
+        z-index: 1;
+    }
+
+    #summary {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    /* #tomato-ketchup {
+        top: 46%;
+        right: -100px;
+        z-index: 1;
+    } */
+}

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Make your burger</title>
+    <title>MYB - Home</title>
     <link rel="icon" href="asset/web-icon/burger.png">
     <!--Meta data-->
     <meta name="author" content="Thanh Vi">
@@ -13,8 +13,11 @@
     <meta property="og:image" content="asset/web-icon/burger.png">
     <!--Import CSS-->
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/myStyle.css">
     <!--Import icon lib-->
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <!--Import JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body class="w-100 h-100">
@@ -28,11 +31,12 @@
             <div class="collapse navbar-collapse d-flex flex-row justify-content-between align-items-baseline"
                 id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                    <li class="nav-item position-relative">
                         <a class="nav-link active" aria-current="page" href="#">Discover</a>
+                        <div id="active-link"></div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Make your burger</a>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="make-burger.html">Make your burger</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row align-items-baseline">
@@ -45,7 +49,7 @@
                         </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">8 800 437-87-22</a>
+                        <a class="nav-link active" href="#">8 800 437-87-22</a>
                     </li>
                     <li class="nav-item">
                         <img class="navbar-brand" src="asset/web-icon/avatar.png" style="width:50px;height:60px;">
@@ -54,6 +58,7 @@
             </div>
         </div>
     </nav>
+    <!-- End header -->
     <main class="" style="width:100vw;height:100vh; ">
         <div class="container" style="width:100%;height:100%;">
             <div class="container row" style="width:100%;height:100%;">
@@ -65,19 +70,37 @@
                 <div class="col-8 col-md-10 col-lg-8">
                     <div class="position-relative d-flex justify-content-center align-items-center"
                         style="width:100%;height:100%;left:5%">
-                        <img src="asset/banner/burger.png" class="w-90 h-80">
+                        <img src="asset/banner/burger.png" class="w-90 h-80 position-relative" id="burger">
                         <img src="asset/banner/Vector.png" class="position-absolute"
                             style="top: 20%;left:10%;z-index:-1;width:75%;height:70%">
-                        <div class="position-absolute rounded-circle"
-                            style="top: 57%;left:-2%;z-index:1;width:130px;height:130px;background:#5243C2">
-                                <h3 class="text-white position-relative text-center" style="top:29px; left: -1px;">Make burger</h3>
+                        <div class="position-absolute rounded-circle" id="main-button">
+                            <h3 class="position-relative text-center" style="top:29px; left: -1px; color:inherit;">Make
+                                burger</h3>
+                        </div>
+                        <div class="position-absolute rounded-circle" id="circle-btn">
+                        </div>
+                        <div class="position-absolute rounded-circle bg-success" id="">
+                            <div class="position-relative bg-success" id="icon">
+                                <img src="asset/web-icon/image 30.png" id="love"
+                                    style="width: 60px; height: 60px; top: -4rem; left: -15rem; z-index: 1;"
+                                    class="position-absolute">
+                                <img src="asset/web-icon/image 117.png" id="1"
+                                    style="width: 50px; height: 50px;top: 5rem; left: 13rem; z-index: 1;"
+                                    class="position-absolute">
+                                <img src="asset/web-icon/image 24.png" id="2"
+                                    style="width: 75px; height: 75px;top: -5rem; right: -12rem; z-index: 1;"
+                                    class="position-absolute">
+                                <img src="asset/web-icon/image 339.png" id="3"
+                                    style="width: 55px; height: 55px;top: 11rem; left: -5rem; z-index: 1;"
+                                    class="position-absolute">
+                            </div>
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
-    </main>
+    </main> <!-- End main -->
     <nav class="container-fluid navbar navbar-expand-lg bg-white position-fixed bottom-0">
         <div class="container-lg p-0">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -129,6 +152,86 @@
             </div>
         </div>
     </nav>
+    <!-- End footer -->
+    <script>
+        document.getElementById("main-button").addEventListener("click", () => {
+            window.location.href = "make-burger.html";
+        })
+        // setInterval(()=>{
+        //     document.getElementById("circle-btn").style.transform = 'rotateZ(360deg)';
+        // },50)
+        $(document).ready(function () {
+            setTimeout(blink(), 1000);
+            setTimeout(love("#love"), 2000);
+            setTimeout(happy("#1"), 2000);
+            setTimeout(light("#2"), 2000);
+            setTimeout(like("#3"), 2000);
+            // setTimeout(function (){
+            //     document.getElementById("circle-btn").style.transform = 'rotateZ(360deg)'
+            // }, 1000);
+
+        });
+        function blink() {
+            $("#burger").animate({ top: '10px' }, 900);
+            $("#burger").animate({ top: '-10px' }, 900, function () {
+                setTimeout(function () {
+                    blink();
+                }, 10);
+            });
+
+        }
+        function love(id) {
+            $(id).animate({ top: '-6rem', left: '-17rem', width: 'show', height: 'show' }, 1000)
+            $(id).animate({ top: '-2em', left: '-13rem', width: 'toggle', height: 'toggle' }, 700, function () {
+                setTimeout(function () {
+                    // $(id).hide(700, love(id))
+                    love(id)
+                }, 1000)
+            });
+        }
+        function happy(id) {
+            $(id).animate({ top: '5rem', left: '13rem', width: 'show', height: 'show' }, 1000)
+            $(id).animate({ top: '3em', left: '11rem', width: 'toggle', height: 'toggle' }, 700, function () {
+                setTimeout(function () {
+                    // $(id).hide(700, love(id))
+                    happy(id)
+                }, 1000)
+            });
+        }
+        function light(id) {
+            $(id).animate({ top: '-8rem', right: '-14rem', width: 'show', height: 'show' }, 1000)
+            $(id).animate({ top: '-3em', right: '-10rem', width: 'toggle', height: 'toggle' }, 700, function () {
+                setTimeout(function () {
+                    // $(id).hide(700, love(id))
+                    light(id)
+                }, 1000)
+            });
+        }
+        function like(id) {
+            $(id).animate({ top: '12rem', left: '-7rem', width: 'show', height: 'show' }, 1000)
+            $(id).animate({ top: '10rem', left: '-3rem', width: 'toggle', height: 'toggle' }, 700, function () {
+                setTimeout(function () {
+                    // $(id).hide(700, love(id))
+                    like(id)
+                }, 1000)
+            });
+        }
+        // <img src="asset/web-icon/image 30.png" id="love" style="width: 60px; height: 60px; top: -4rem; left: -15rem; z-index: 1;" class="position-absolute">
+        //     <img src="asset/web-icon/image 117.png" id="1" style="width: 50px; height: 50px;top: 5rem; left: 13rem; z-index: 1;" class="position-absolute">
+        //                         <!-- <img src="asset/web-icon/image 24.png" id="2" style="width: 70px; height: 70px;top: -5rem; right: -12rem; z-index: -1;" class="position-absolute"> -->
+        //             <img src="asset/web-icon/image 339.png" id="3" style="width: 50px; height: 50px;top: 11rem; left: -5rem; z-index: 1;" class="position-absolute">
+        // jQuery(function ($) {
+        //     (function swoop(element) {
+        //         element
+        //             .animate({ 'margin-top': '30px' }, 700)
+        //             .animate({ 'margin-top': '-30px' }, 700, function () {
+        //                 setTimeout(function () {
+        //                     swoop(element);
+        //                 }, 500);
+        //             });
+        //     })($('#burger'));
+        // });
+    </script>
 </body>
 
 </html>
