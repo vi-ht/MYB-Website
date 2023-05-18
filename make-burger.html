@@ -11,6 +11,7 @@
     <meta property="og:description" content="Make our own burger!">
     <meta property="og:url" content="http://">
     <meta property="og:image" content="asset/web-icon/burger.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Import CSS-->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/myStyle.css">
@@ -36,14 +37,13 @@
                     </li>
                     <li class="nav-item position-relative">
                         <a class="nav-link active" href="index.html">Make your burger</a>
-                        <div id="active-link" style="width: 133px;"></div>
+                        <div id="active-link"></div>
                     </li>
                 </ul>
                 <ul class="navbar-nav d-flex flex-row align-items-baseline">
                     <li class="nav-item">
-                        <button type="button" class="btn btn-primary rounded-pill position-relative"
-                            style="background:#FFEDED; border:none;color:#FF4D4F">
-                            <iconify-icon icon="ic:baseline-local-phone" style="color: #FF4D4F;top:6px;left:9px"
+                        <button type="button" class="btn btn-primary rounded-pill position-relative" id="call-btn">
+                            <iconify-icon icon="ic:baseline-local-phone" style="color: inherit;top:6px;left:9px"
                                 width="24" height="24" class="position-absolute"></iconify-icon>
                             <span class="ms-4">Call Me Back</span>
                         </button>
@@ -62,23 +62,82 @@
     <main class="" style="width:100vw;height:100vh; ">
         <div class="container" style="width:100%;height:100%;">
             <div class="container row position-relative" style="width:100%;height:100%;">
-                <div class="col-2 col-md-2 col-lg-2 d-flex justify-content-center align-items-center flex-column">
+                <div class="col-2 col-md-2 col-lg-2" id="steps">
+                    <!-- <h3 style="width:200%;">3 steps for a burger</h3>
+                    <hr style="width:160%;"> -->
+                    <!--  flex-column -->
+                    <div class="d-flex flex-row justify-content-center position-relative" style="width:200%;">
+                        <div class="position-relative w-100">
+                            <div class="step-anim-active">
+                                <div class="step-ouside step-active">
+                                </div>
+                            </div>
+                            <div class="step-num">1</div>
+                            <div class="mt-1 active-text position-absolute">Make your own hamburger</div>
+                            <div class="step-line step-active position-absolute"></div>
+                            <div class="step-content-active position-absolute">
+                                <ul>
+                                    <li>Add all your favorite ingredients.</li>
+                                    <li class="position-relative" style="top:-6px">Click <span
+                                            class="step-icon-active"><iconify-icon
+                                                icon="heroicons:information-circle-solid" width="24" height="24"
+                                                class="position-relative"></iconify-icon></span> to view ingredient
+                                        details.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center position-relative" style="width:200%;top:3rem">
+                        <div class="position-relative w-100">
+                            <div class="step-anim">
+                                <div class="step-ouside">
+                                </div>
+                            </div>
+                            <div class="step-num">2</div>
+                            <div class="mt-1 step-text position-absolute">Confirm order</div>
+                            <div class="step-line position-absolute"></div>
+                            <div class="step-content position-absolute">
+                                <ul>
+                                    <li>Click <span class="step-btn">Complete</span> to finish.</li>
+                                    <li>Check your order.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center position-relative" style="width:200%;top:6rem">
+                        <div class="position-relative w-100">
+                            <div class="step-anim">
+                                <div class="step-ouside">
+                                </div>
+                            </div>
+                            <div class="step-num">3</div>
+                            <div class="mt-1 step-text position-absolute">Checkout</div>
+                            <div class="step-line position-absolute"></div>
+                            <div class="step-content position-absolute">
+                                <ul>
+                                    <li>Click <span class="step-btn">Checkout</span> to complete your order.</li>
+                                    <li>Checkout and wait for your burger.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
                 <div class="col-9 col-md-10 col-lg-6">
                     <div class="col-7 position-relative d-flex justify-content-center align-items-center"
-                        style="width:100%;height:100%;left:5%">
+                        style="width:100%;height:100%;left:10%">
                         <img src="asset/banner/empty-burger.png" class="position-absolute" id="empty-bun">
                         <img src="asset/ingredients/tomato-ketchup.png" class="position-absolute" id="tomato-ketchup">
                     </div>
                 </div>
-                <div class="col-4 col-md-2 col-lg-4" style="" id="summary">
-                    <h3>Summary</h3>
+                <div class="col-4 col-md-2 col-lg-4" id="summary">
+                    <h3 id="test">Summary</h3>
                     <hr>
                     <div class="d-flex flex-row justify-content-between mb-2">
                         <span class="display-6 fw-bold" style="color: #5243C2">$12.04</span>
                         <button type="button" class="btn btn-primary rounded-pill p-0 ps-5 pe-5 fw-bold"
-                            style="background-color: #5243C2;border: none;">Complete</button>
+                            id="complete-btn">Complete</button>
                     </div>
                     <div>Build a <span class="fw-bold" style="color:#FF4D4F">$10</span> Burger and <span class="fw-bold"
                             style="color:#5243C2">Get a Gift</span></div>
@@ -101,7 +160,7 @@
                 </div>
                 <div class="col-12 row position-absolute" style="bottom: 9%;">
                     <div class="col p-1 position-relative">
-                        <div class="position-absolute info p-2" id="beef-card" style="left: 10px;">
+                        <div class="position-absolute info p-2" id="beef-card" style="left: 10px;z-index: 1;">
                             <img src="asset/ingredients/cutlet.png" style="width:60%;height:40px;margin: 5px 20%"
                                 class="mt-3 mb-2">
                             <div class="text-center fw-bold">Cutlet</div>
@@ -125,8 +184,8 @@
                         </div>
                         <div class="position-absolute retangle" id="beef-reg"></div>
                         <iconify-icon icon="heroicons:information-circle-solid" width="30" height="30"
-                            style="color:#5243C2;top:-3px;right:-3px" class="position-absolute"
-                            id="beef-info"></iconify-icon>
+                            style="color:#5243C2;top:-3px;right:-3px; z-index: 1;cursor: pointer;"
+                            class="position-absolute" id="beef-info"></iconify-icon>
                         <div class="ingredient-card p-2">
                             <img src="asset/ingredients/cutlet.png" style="width:100%;height:30px" class="mt-3 mb-2">
                             <div class="text-center fw-semibold">Cutlet</div>
@@ -267,7 +326,7 @@
                     <div class="col p-1 position-relative">
 
                         <div class="ingredient-card p-2 position-relative" style="z-index: 0 !important;">
-                            <img src="asset/ingredients/tomato.png" style="width:90%;height:45px;top: -3px"
+                            <img src="asset/ingredients/tomato.png" style="width:90%;height:50px;top: -5px"
                                 class="mt-3 mb-2 position-absolute">
                             <div style="width:100%;height:30px" class="mt-3 mb-2"></div>
                             <div class="text-center fw-semibold">Tomato</div>
@@ -337,7 +396,7 @@
                         </div>
                         <div class="position-absolute retangle" id="onion-reg"></div>
                         <div class="ingredient-card p-2 position-relative">
-                            <img src="asset/ingredients/onion.png" style="width:90%;height:45px;top: -3px"
+                            <img src="asset/ingredients/onion.png" style="width:90%;height:50px;top: -5px"
                                 class="mt-3 mb-2 position-absolute">
                             <div style="width:100%;height:30px" class="mt-3 mb-2"></div>
                             <div class="text-center fw-semibold">Onion</div>
@@ -400,7 +459,7 @@
                     <div class="col p-1 position-relative">
                         <div class="position-absolute info p-2" id="cucumber-card" style="left: -100px;">
                             <img src="asset/ingredients/cucumber.png"
-                                style="width:60%;height:85px;margin: 5px 20%; top:-10px"
+                                style="width:60%;height:100px;margin: 5px 20%; top:-20px"
                                 class="mt-3 mb-2 position-absolute">
                             <div style="width:60%;height:40px;margin: 5px 20%" class="mt-3 mb-2"></div>
                             <div class="text-center fw-bold">Cucumber</div>
@@ -425,7 +484,7 @@
                         </div>
                         <div class="position-absolute retangle" id="cucumber-reg"></div>
                         <div class="ingredient-card p-2 position-relative">
-                            <img src="asset/ingredients/cucumber.png" style="width:90%;height:75px; top: -15px"
+                            <img src="asset/ingredients/cucumber.png" style="width:90%;height:80px; top: -18px"
                                 class="mt-3 mb-2 position-absolute">
                             <div style="width:100%;height:30px" class="mt-3 mb-2"></div>
                             <div class="text-center fw-semibold">Cucumber</div>
@@ -504,6 +563,7 @@
     </nav>
     <!-- End footer -->
     <script>
+        // document.getElementById("test").innerHTML = `${window.innerWidth} ${window.innerHeight}`;
         var listIngredient = ["beef", "cheese", "mayo", "salad", "tomato", "onion", "bun", "cucumber"];
         $(document).ready(function () {
             $("#tomato-ketchup").hide();

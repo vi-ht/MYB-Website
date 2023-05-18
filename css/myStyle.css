@@ -1,3 +1,23 @@
+#call-btn {
+    background: #FFEDED;
+    border: none;
+    color: #FF4D4F;
+}
+
+#call-btn:hover {
+    background: #FF4D4F;
+    border: none;
+    color: #FFEDED;
+    box-shadow: 2px 2px 2px 0 #ff4d5057, 4px 6px 5px 0 #ff4d5057;
+}
+
+#complete-btn {
+    background-color: #5243C2;
+    border: none;
+}
+#complete-btn:hover {
+    box-shadow: 4px 4px 4px 0 #c4c4fd,2px 2px 5px 0 #c4c4fd;
+}
 #circle-btn {
     animation-name: example;
     animation-duration: 1.5s;
@@ -47,11 +67,11 @@
 }
 
 #active-link {
-    width: 65px;
+    width: 90%;
     height: 4px;
     position: absolute;
     bottom: 2px;
-    left: 5px;
+    left: 5%;
     background: #5243C2;
     border-radius: 5px;
 }
@@ -102,6 +122,129 @@
     border-radius: 1rem;
 }
 
+/*step-style*/
+.step-ouside {
+    width: 26px;
+    height: 26px;
+    background: rgb(190, 190, 190);
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    left: 2px;
+
+}
+
+.step-anim {
+    width: 34px;
+    height: 34px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    border: 2px solid lightgrey;
+}
+
+.step-anim-active {
+    width: 34px;
+    height: 34px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    border: 2px solid #5243C2;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    animation-name: step-animate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+.step-num {
+    color: white;
+    position: absolute;
+    top: 6.5px;
+    left: 13.5px;
+    font-size: 0.90rem;
+    font-weight: 600;
+}
+
+.active-text {
+    color: #5243C2;
+    font-weight: 600;
+    top: 0;
+    left: 40px;
+}
+
+.step-text {
+    color: rgb(146, 145, 145);
+    font-weight: 600;
+    top: 0;
+    left: 40px;
+}
+
+.step-line {
+    background: rgb(190, 190, 190);
+    width: 2.3rem;
+    height: 2px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 55px;
+    left: 0px;
+}
+
+.step-btn-active {
+    background: #5243C2;
+    border-radius: 1rem;
+    padding: 2px 5px 3px 5px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.step-btn {
+    background: rgb(197, 197, 197);
+    border-radius: 1rem;
+    padding: 2px 5px 3px 5px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.step-content {
+    font-size: 0.90rem;
+    color: rgb(190, 190, 190);
+    top: 2rem;
+    left: 25px;
+    margin-top: 2px;
+}
+
+.step-icon-active {
+    color: #5243C2;
+    top: 7px;
+    position: relative;
+}
+
+.step-content-active {
+    font-size: 0.9rem;
+    color: #7b71c6d2;
+    top: 2rem;
+    left: 25px;
+    margin-top: 2px;
+}
+
+.step-active {
+    background: #5243C2;
+}
+
+@keyframes step-animate {
+
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/*-----------------------------------------*/
 .retangle {
     width: 20px;
     height: 20px;
@@ -120,7 +263,7 @@
 }
 
 #summary {
-    margin-top: 10%;
+    margin-top: 20vh;
 }
 
 #empty-bun {
@@ -131,7 +274,16 @@
     height: 58%
 }
 
+#steps {
+    margin-top: 20vh;
+    left: -2%;
+}
+
 @media screen and (min-width: 1400px) {
+    .step-content-active, .step-content {
+        font-size: 0.95rem;
+    }
+
     #circle-btn {
         top: 56.1%;
         left: -2.9%;
@@ -143,14 +295,8 @@
         z-index: 1;
     }
 
-    #summary {
-        margin-top: 15%;
-    }
-
     @media screen and (max-width: 1500px) and (min-width: 1400px) {
-        #summary {
-            margin-top: 12%;
-        }
+
         #empty-bun {
             top: 7%;
             left: 15%;
@@ -167,9 +313,6 @@
         z-index: 1;
     }
 
-    #summary {
-        margin-top: 10%;
-    }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 992px) {
